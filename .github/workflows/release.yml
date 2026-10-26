@@ -1,0 +1,29 @@
+name: Release candidate
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run check:release
+      - run: npm run package
+      - uses: actions/upload-artifact@v7
+        with:
+          name: release-candidate
+          path: artifacts/*
+      # Initial public review uses an unsigned candidate. Add public signing
+      # only after Grafana grants this plugin a signature level.

@@ -1,0 +1,20 @@
+Flexible Bar Gauge
+Copyright 2026 bodothebest and contributors
+
+The plugin's original code is licensed under AGPL-3.0-only; see LICENSE.
+
+Third-party components retain their own licenses:
+
+- @grafana/schema 13.0.2, by Grafana Labs, Apache-2.0.
+  The production bundle includes the gauge enum constants used by this panel.
+  Source: https://github.com/grafana/grafana/tree/v13.0.2/packages/grafana-schema
+  License: licenses/grafana-schema-APACHE-2.0.txt
+- @grafana/ui and @grafana/data, by Grafana Labs, Apache-2.0.
+  These packages are supplied by the Grafana host, not embedded in module.js.
+- React, by Meta Platforms, Inc. and affiliates, MIT.
+  React is supplied by the Grafana host, not embedded in module.js.
+- The development configuration was generated using @grafana/create-plugin
+  7.16.0, by Grafana Labs, Apache-2.0. Generated configuration files retain
+  their upstream notices. See licenses/create-plugin-APACHE-2.0.txt.
+
+This community project is not authored or endorsed by Grafana Labs.

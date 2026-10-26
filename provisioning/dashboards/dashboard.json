@@ -1,0 +1,401 @@
+{
+  "uid": "flexible-bargauge-examples",
+  "title": "Flexible Bar Gauge examples",
+  "schemaVersion": 39,
+  "version": 1,
+  "editable": true,
+  "tags": [
+    "flexible-bar-gauge"
+  ],
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timezone": "browser",
+  "panels": [
+    {
+      "id": 1,
+      "title": "Left names · 210 px · ellipsis",
+      "type": "bodothebest-flexiblebargauge-panel",
+      "datasource": {
+        "type": "grafana-testdata-datasource",
+        "uid": "trlxrdZVk"
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 0,
+        "w": 12,
+        "h": 7
+      },
+      "options": {
+        "namePlacement": "left",
+        "nameWidth": 210,
+        "nameWidthUnit": "px",
+        "nameAlign": "left",
+        "nameOverflow": "ellipsis",
+        "nameFontSize": 14,
+        "valueFontSize": 18,
+        "rowHeight": 34,
+        "rowGap": 12,
+        "columnGap": 16,
+        "displayMode": "gradient",
+        "valueMode": "color",
+        "showUnfilled": true,
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "values": true,
+          "limit": 100
+        }
+      },
+      "fieldConfig": {
+        "defaults": {
+          "min": 0,
+          "max": 100,
+          "unit": "percent",
+          "decimals": 0,
+          "color": {
+            "mode": "thresholds"
+          },
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "orange",
+                "value": 65
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "grafana-testdata-datasource",
+            "uid": "trlxrdZVk"
+          },
+          "scenarioId": "raw_frame",
+          "rawFrameContent": "[{\"columns\":[{\"text\":\"Service\",\"type\":\"string\"},{\"text\":\"Utilization\",\"type\":\"number\"}],\"rows\":[[\"API gateway — Europe\",72],[\"Background processing workers\",46],[\"Database replication — secondary cluster\",88],[\"Customer notification delivery\",31]]}]"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Right names · centered · 35%",
+      "type": "bodothebest-flexiblebargauge-panel",
+      "datasource": {
+        "type": "grafana-testdata-datasource",
+        "uid": "trlxrdZVk"
+      },
+      "gridPos": {
+        "x": 12,
+        "y": 0,
+        "w": 12,
+        "h": 7
+      },
+      "options": {
+        "namePlacement": "right",
+        "nameWidth": 35,
+        "nameWidthUnit": "percent",
+        "nameAlign": "center",
+        "nameOverflow": "ellipsis",
+        "nameFontSize": 14,
+        "valueFontSize": 18,
+        "rowHeight": 34,
+        "rowGap": 12,
+        "columnGap": 16,
+        "displayMode": "gradient",
+        "valueMode": "color",
+        "showUnfilled": true,
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "values": true,
+          "limit": 100
+        }
+      },
+      "fieldConfig": {
+        "defaults": {
+          "min": 0,
+          "max": 100,
+          "unit": "percent",
+          "decimals": 0,
+          "color": {
+            "mode": "thresholds"
+          },
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "orange",
+                "value": 65
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "grafana-testdata-datasource",
+            "uid": "trlxrdZVk"
+          },
+          "scenarioId": "raw_frame",
+          "rawFrameContent": "[{\"columns\":[{\"text\":\"Service\",\"type\":\"string\"},{\"text\":\"Utilization\",\"type\":\"number\"}],\"rows\":[[\"API gateway — Europe\",72],[\"Background processing workers\",46],[\"Database replication — secondary cluster\",88],[\"Customer notification delivery\",31]]}]"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Wrapped names · right aligned",
+      "type": "bodothebest-flexiblebargauge-panel",
+      "datasource": {
+        "type": "grafana-testdata-datasource",
+        "uid": "trlxrdZVk"
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 7,
+        "w": 12,
+        "h": 7
+      },
+      "options": {
+        "namePlacement": "left",
+        "nameWidth": 170,
+        "nameWidthUnit": "px",
+        "nameAlign": "right",
+        "nameOverflow": "wrap",
+        "nameFontSize": 14,
+        "valueFontSize": 18,
+        "rowHeight": 34,
+        "rowGap": 12,
+        "columnGap": 16,
+        "displayMode": "basic",
+        "valueMode": "color",
+        "showUnfilled": true,
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "values": true,
+          "limit": 100
+        }
+      },
+      "fieldConfig": {
+        "defaults": {
+          "min": 0,
+          "max": 100,
+          "unit": "percent",
+          "decimals": 0,
+          "color": {
+            "mode": "thresholds"
+          },
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "orange",
+                "value": 65
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "grafana-testdata-datasource",
+            "uid": "trlxrdZVk"
+          },
+          "scenarioId": "raw_frame",
+          "rawFrameContent": "[{\"columns\":[{\"text\":\"Service\",\"type\":\"string\"},{\"text\":\"Utilization\",\"type\":\"number\"}],\"rows\":[[\"API gateway — Europe\",72],[\"Background processing workers\",46],[\"Database replication — secondary cluster\",88],[\"Customer notification delivery\",31]]}]"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Retro LCD · aligned values",
+      "type": "bodothebest-flexiblebargauge-panel",
+      "datasource": {
+        "type": "grafana-testdata-datasource",
+        "uid": "trlxrdZVk"
+      },
+      "gridPos": {
+        "x": 12,
+        "y": 7,
+        "w": 12,
+        "h": 7
+      },
+      "options": {
+        "namePlacement": "left",
+        "nameWidth": 220,
+        "nameWidthUnit": "px",
+        "nameAlign": "left",
+        "nameOverflow": "ellipsis",
+        "nameFontSize": 14,
+        "valueFontSize": 18,
+        "rowHeight": 34,
+        "rowGap": 12,
+        "columnGap": 16,
+        "displayMode": "lcd",
+        "valueMode": "color",
+        "showUnfilled": true,
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "values": true,
+          "limit": 100
+        }
+      },
+      "fieldConfig": {
+        "defaults": {
+          "min": 0,
+          "max": 100,
+          "unit": "percent",
+          "decimals": 0,
+          "color": {
+            "mode": "thresholds"
+          },
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "orange",
+                "value": 65
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "grafana-testdata-datasource",
+            "uid": "trlxrdZVk"
+          },
+          "scenarioId": "raw_frame",
+          "rawFrameContent": "[{\"columns\":[{\"text\":\"Service\",\"type\":\"string\"},{\"text\":\"Utilization\",\"type\":\"number\"}],\"rows\":[[\"API gateway — Europe\",72],[\"Background processing workers\",46],[\"Database replication — secondary cluster\",88],[\"Customer notification delivery\",31]]}]"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Empty result",
+      "type": "bodothebest-flexiblebargauge-panel",
+      "datasource": {
+        "type": "grafana-testdata-datasource",
+        "uid": "trlxrdZVk"
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 14,
+        "w": 24,
+        "h": 4
+      },
+      "options": {
+        "namePlacement": "left",
+        "nameWidth": 210,
+        "nameWidthUnit": "px",
+        "nameAlign": "left",
+        "nameOverflow": "ellipsis",
+        "nameFontSize": 14,
+        "valueFontSize": 18,
+        "rowHeight": 34,
+        "rowGap": 12,
+        "columnGap": 16,
+        "displayMode": "gradient",
+        "valueMode": "color",
+        "showUnfilled": true,
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "values": true,
+          "limit": 100
+        }
+      },
+      "fieldConfig": {
+        "defaults": {
+          "min": 0,
+          "max": 100,
+          "unit": "percent",
+          "decimals": 0,
+          "color": {
+            "mode": "thresholds"
+          },
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "orange",
+                "value": 65
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "grafana-testdata-datasource",
+            "uid": "trlxrdZVk"
+          },
+          "scenarioId": "no_data_points"
+        }
+      ]
+    }
+  ]
+}

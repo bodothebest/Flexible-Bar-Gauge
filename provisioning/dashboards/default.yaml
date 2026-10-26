@@ -1,0 +1,7 @@
+apiVersion: 1
+
+providers:
+  - name: 'Flexible Bar Gauge'
+    type: file
+    options:
+      path: /etc/grafana/provisioning/dashboards
