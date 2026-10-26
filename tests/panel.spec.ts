@@ -10,7 +10,7 @@ for (const example of [
     readProvisionedDashboard,
     gotoPanelEditPage,
   }) => {
-    const dashboard = await readProvisionedDashboard({ fileName: 'dashboards/dashboard.json' });
+    const dashboard = await readProvisionedDashboard({ fileName: 'dashboard.json' });
     const editor = await gotoPanelEditPage({ dashboard, id: example.id });
     const label = editor.panel.locator.locator('div[title="API gateway — Europe"]');
     await expect(label).toHaveCSS('text-align', example.align);
@@ -25,7 +25,7 @@ for (const example of [
 }
 
 test('an empty query has no plugin load failure', async ({ readProvisionedDashboard, gotoPanelEditPage }) => {
-  const dashboard = await readProvisionedDashboard({ fileName: 'dashboards/dashboard.json' });
+  const dashboard = await readProvisionedDashboard({ fileName: 'dashboard.json' });
   const editor = await gotoPanelEditPage({ dashboard, id: '5' });
   await expect(editor.panel.locator).toContainText('No data');
   await expect(editor.panel.locator).not.toContainText('Error loading:');
